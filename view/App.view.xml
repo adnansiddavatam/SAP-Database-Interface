@@ -1,0 +1,36 @@
+<mvc:View
+  controllerName="sapapp.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <App>
+    <pages>
+      <Page title="Welcome to SAP UI5!">
+        <content>
+          <VBox class="sapUiSmallMargin">
+            <Label text="Add Employee" class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
+
+            <Input id="empNameInput" placeholder="Full Name" width="300px" />
+            <Input id="empEmailInput" placeholder="Email" width="300px" type="Email" />
+            <Input id="empTitleInput" placeholder="Job Title" width="300px" />
+            <Input id="empDeptInput" placeholder="Department" width="300px" />
+
+            <Button text="Add to Directory" press=".onAddEmployee" class="sapUiSmallMarginTop" />
+
+            <List id="employeeList" items="{employeeModel>/employees}" class="sapUiSmallMarginTop">
+  <items>
+    <StandardListItem
+      title="{employeeModel>name}"
+      description="{employeeModel>email}"
+      info="{employeeModel>title}"
+      infoState="Success"
+    />
+  </items>
+</List>
+
+          </VBox>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
