@@ -4,7 +4,7 @@ A simple SAP UI5 app that lets users add employee details and view them in a liv
 
 ---
 
-## 🚀 Features
+🚀 Features
 
 - Add new employee entries (Name, Email, Title, Department)
 - Input validation for completeness
